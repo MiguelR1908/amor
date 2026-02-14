@@ -211,13 +211,7 @@ color:white;
 <div class="section">
 <h2>💌 Lo que siento por ti</h2>
 <p id="typed"></p>
-<button onclick="mostrarPregunta()">Haz clic aquí 💫</button>
 <div id="final"></div>
-
-<div id="respuesta" style="margin-top:20px; display:none;">
-    <button onclick="respuestaSi()">Sí ❤️</button>
-    <button onclick="respuestaSiempre()">Siempre 💫</button>
-</div>
 
 </div>
 
@@ -272,11 +266,6 @@ setTimeout(typing,80);
 }
 typing();
 
-function mostrarPregunta(){
-document.getElementById("final").innerHTML =
-"Hoy no solo quiero preguntarte algo… quiero prometerte que siempre elegiré caminar contigo. ¿Aceptas seguir construyendo nuestro futuro juntos?";
-document.getElementById("respuesta").style.display = "block";
-}
 
 
 // Modal galería
@@ -333,21 +322,7 @@ function activarMusicaUnaVez() {
     document.removeEventListener("click", activarMusicaUnaVez);
 }
 
-function respuestaSi(){
-    document.getElementById("final").innerHTML =
-    "Prometo apoyarte, cuidarte y querer lo mejor para ti todos los días de mi vida ❤️✨";
 
-    explosionEstrellas();
-    aumentarMusica();
-}
-
-function respuestaSiempre(){
-    document.getElementById("final").innerHTML =
-    "Entonces que el universo sea testigo… porque lo nuestro es para siempre 💫❤️";
-
-    explosionEstrellas();
-    aumentarMusica();
-}
 function explosionEstrellas(){
     for(let i = 0; i < 100; i++){
         const estrella = document.createElement("div");
@@ -469,10 +444,36 @@ function generarCorazones(){
 
 function victoriaJuego(){
     document.getElementById("final").innerHTML =
-    "Ganaste ❤️ Pero el verdadero premio es seguir construyendo nuestra historia juntos, 💫✨<br> puedes pedirme lo que desees <3";
+    "Ganaste ❤️✨<br><br>" +
+    "Ahora puedes pedirme lo que quieras 🎁💫<br><br>" +
+    "<input id='pedido' placeholder='Escribe aquí tu regalo...' " +
+    "style='padding:12px;border-radius:12px;border:none;width:80%;max-width:400px;'><br><br>" +
+    "<button onclick='confirmarPedido()'>Confirmar pedido 💖</button>";
 
     explosionEstrellas();
 }
+function confirmarPedido(){
+
+    const pedido = document.getElementById("pedido").value;
+
+    if(pedido.trim() === ""){
+        alert("Tienes que pedir algo 😌");
+        return;
+    }
+
+    const numero = "51959706783"; // 👈 PON TU NÚMERO AQUÍ (sin + y sin espacios)
+
+    const mensaje = encodeURIComponent(
+        "🎁 CONTRATO ROMÁNTICO ACTIVADO 🎁\n\n" +
+        "Ya gané el juego ❤️✨\n\n" +
+        "Mi pedido es:\n" + pedido +
+        "\n\nFecha: " + new Date().toLocaleString() +
+        "\n\nFirmado: Tu persona favorita 💖"
+    );
+
+    window.open("https://wa.me/" + numero + "?text=" + mensaje, "_blank");
+}
+
 
 
 </script>
