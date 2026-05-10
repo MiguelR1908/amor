@@ -1,482 +1,756 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuestro Universo ❤️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día de la Madre ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body{
-font-family:'Poppins',sans-serif;
-color:white;
-overflow-x:hidden;
-background:#000814;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* 🌌 Fondo estrellas */
-.stars{
-position:fixed;
-width:100%;
-height:100%;
-background:transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-animation: moveStars 200s linear infinite;
-z-index:-3;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow-x: hidden;
+            background: #120014;
+        }
 
-@keyframes moveStars{
-from{background-position:0 0;}
-to{background-position:-10000px 5000px;}
-}
+        /* 🌌 Fondo estrellas - se mantiene */
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+            animation: moveStars 200s linear infinite;
+            z-index: -4;
+        }
 
-/* ✨ Nebulosa */
-.nebula{
-position:fixed;
-width:100%;
-height:100%;
-background:radial-gradient(circle at 20% 30%, rgba(114,9,183,0.6), transparent 40%),
-radial-gradient(circle at 80% 70%, rgba(255,0,110,0.5), transparent 40%);
-animation: pulse 8s ease-in-out infinite alternate;
-z-index:-2;
-transition: transform 0.2s, opacity 0.2s;
-}
+        @keyframes moveStars {
+            from {
+                background-position: 0 0;
+            }
 
-@keyframes pulse{
-from{opacity:0.6;}
-to{opacity:1;}
-}
+            to {
+                background-position: -10000px 5000px;
+            }
+        }
 
-.container{
-padding:80px 20px;
-text-align:center;
-}
+        /* ✨ Fondo romántico - se mantiene */
+        .nebula {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 25%, rgba(255, 0, 110, 0.65), transparent 38%),
+                radial-gradient(circle at 80% 70%, rgba(255, 189, 207, 0.45), transparent 42%),
+                radial-gradient(circle at 50% 50%, rgba(114, 9, 183, 0.55), transparent 55%);
+            animation: pulse 8s ease-in-out infinite alternate;
+            z-index: -3;
+            transition: transform 0.2s, opacity 0.2s;
+        }
 
-h1{
-font-family:'Great Vibes',cursive;
-font-size:5em;
-}
+        @keyframes pulse {
+            from {
+                opacity: 0.62;
+            }
 
-.subtitle{
-opacity:0.8;
-margin-bottom:60px;
-}
+            to {
+                opacity: 1;
+            }
+        }
 
-.section{
-margin:100px auto;
-max-width:900px;
-padding:40px;
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-backdrop-filter:blur(10px);
-box-shadow:0 10px 40px rgba(0,0,0,0.6);
-}
+        .container {
+            width: min(1120px, 94%);
+            margin: auto;
+            padding: 38px 0 130px;
+        }
 
-.counter{
-font-size:1.8em;
-margin-top:20px;
-}
+        .hero {
+            min-height: 92vh;
+            display: grid;
+            place-items: center;
+            position: relative;
+        }
 
-button{
-margin-top:30px;
-padding:15px 40px;
-border:none;
-border-radius:50px;
-background:linear-gradient(45deg,#ff006e,#ff4d6d);
-color:white;
-font-size:1em;
-cursor:pointer;
-transition:0.3s;
-}
+        .hero-card {
+            width: 100%;
+            max-width: 1050px;
+            position: relative;
+            overflow: hidden;
+            padding: clamp(38px, 8vw, 82px) clamp(22px, 6vw, 70px);
+            border-radius: 48px;
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.055)),
+                linear-gradient(135deg, rgba(255, 0, 110, 0.12), rgba(255, 255, 255, 0.02));
+            backdrop-filter: blur(18px);
+            box-shadow:
+                0 35px 90px rgba(0, 0, 0, 0.62),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+            text-align: center;
+        }
 
-button:hover{
-transform:scale(1.1);
-box-shadow:0 0 20px #ff4d6d;
-}
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 133, 161, 0.42), transparent 68%);
+            top: -120px;
+            right: -110px;
+        }
 
-/* ❤️ Corazones */
-.heart{
-position:fixed;
-color:#ff4d6d;
-animation:float 7s linear infinite;
-z-index:-1;
-}
+        .hero-card::after {
+            content: "Mamá";
+            position: absolute;
+            left: -10px;
+            bottom: -45px;
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(6rem, 18vw, 13rem);
+            color: rgba(255, 255, 255, 0.055);
+            transform: rotate(-8deg);
+            pointer-events: none;
+        }
 
-@keyframes float{
-0%{transform:translateY(100vh);opacity:1;}
-100%{transform:translateY(-10vh);opacity:0;}
-}
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 26px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 35px rgba(255, 0, 110, 0.42);
+            font-weight: 700;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1;
+        }
 
-#typed{
-min-height:220px;
-line-height:2.1em;
-font-size:1.6em;
-font-weight:300;
-letter-spacing:0.6px;
-}
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(4.2rem, 12vw, 9.5rem);
+            line-height: 0.9;
+            text-shadow: 0 0 28px rgba(255, 77, 109, 0.72);
+            position: relative;
+            z-index: 1;
+        }
 
+        .subtitle {
+            max-width: 760px;
+            margin: 28px auto 0;
+            font-size: clamp(1rem, 3vw, 1.35rem);
+            opacity: 0.94;
+            line-height: 1.9;
+            position: relative;
+            z-index: 1;
+        }
 
-#final{
-margin-top:20px;
-font-weight:bold;
-font-size:1.3em;
-color:#ffd60a;
-}
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 38px;
+            position: relative;
+            z-index: 1;
+        }
 
-/* 📸 Galería */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:40px;
-}
+        .scroll-link {
+            display: inline-block;
+            margin-top: 36px;
+            color: #ffd6e0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            opacity: 0.92;
+            animation: subirBajar 1.8s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
 
-.gallery img{
-width:100%;
-height:300px;
-object-fit:cover;
-border-radius:20px;
-cursor:pointer;
-transition:0.4s;
-}
+        @keyframes subirBajar {
 
-.gallery img:hover{
-transform:scale(1.05);
-}
+            0%,
+            100% {
+                transform: translateY(0);
+            }
 
-/* Modal */
-.modal{
-display:none;
-position:fixed;
-z-index:1000;
-padding-top:60px;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-}
+            50% {
+                transform: translateY(8px);
+            }
+        }
 
-.modal img{
-display:block;
-margin:auto;
-max-width:80%;
-max-height:80%;
-border-radius:20px;
-}
+        .love-path {
+            display: grid;
+            gap: 48px;
+            position: relative;
+        }
 
-.close{
-position:absolute;
-top:30px;
-right:40px;
-font-size:40px;
-cursor:pointer;
-color:white;
-}
-</style>
+        .love-path::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            left: 50%;
+            width: 2px;
+            background: linear-gradient(transparent, rgba(255, 214, 224, 0.55), transparent);
+            transform: translateX(-50%);
+            opacity: 0.65;
+        }
+
+        .section {
+            width: min(930px, 100%);
+            padding: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            backdrop-filter: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section:nth-child(odd) {
+            justify-self: start;
+        }
+
+        .section:nth-child(even) {
+            justify-self: end;
+        }
+
+        .romantic-card {
+            position: relative;
+            padding: clamp(30px, 5vw, 50px);
+            border-radius: 34px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.055));
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 22px 58px rgba(0, 0, 0, 0.52);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .romantic-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left, rgba(255, 133, 161, 0.24), transparent 38%);
+            pointer-events: none;
+        }
+
+        .romantic-card::after {
+            content: "❤";
+            position: absolute;
+            right: 22px;
+            bottom: -24px;
+            font-size: 7rem;
+            color: rgba(255, 255, 255, 0.055);
+            pointer-events: none;
+        }
+
+        .section h2,
+        .section p,
+        .section div,
+        .section span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section h2 {
+            font-size: clamp(1.55rem, 4vw, 2.2rem);
+            margin-bottom: 18px;
+            color: #ffd6e0;
+        }
+
+        .mini-title {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 8px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            color: #ffe6ee;
+            font-size: 0.9rem;
+        }
+
+        button {
+            margin-top: 28px;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 999px;
+            background: linear-gradient(45deg, #ff006e, #ff4d6d, #ff85a1);
+            color: white;
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(255, 77, 109, 0.35);
+        }
+
+        button:hover {
+            transform: scale(1.07) translateY(-3px);
+            box-shadow: 0 0 25px #ff4d6d;
+        }
+
+        .outline-btn {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            box-shadow: none;
+        }
+
+        .music-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .music-box button {
+            margin-top: 0;
+            padding: 12px 20px;
+            font-size: 0.9em;
+        }
+
+        .heart {
+            position: fixed;
+            color: #ff4d6d;
+            animation: float 7s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        #typed,
+        #typedHija {
+            min-height: 260px;
+            white-space: pre-line;
+            line-height: 2.05em;
+            font-size: clamp(1.05em, 3vw, 1.32em);
+            font-weight: 300;
+            letter-spacing: 0.4px;
+            text-align: left;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        #typedHija {
+            color: #fff3f7;
+        }
+
+        #final {
+            margin-top: 28px;
+            font-weight: bold;
+            font-size: 1.25em;
+            color: #ffd60a;
+        }
+
+        .gallery-card {
+            width: 100%;
+            margin-top: 52px;
+            padding: clamp(30px, 5vw, 48px);
+            border-radius: 38px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.055));
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 24px 62px rgba(0, 0, 0, 0.55);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-card::before {
+            content: "Nuestros recuerdos";
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(4rem, 12vw, 8rem);
+            color: rgba(255, 255, 255, 0.05);
+            white-space: nowrap;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 38px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 28px;
+            cursor: pointer;
+            transition: 0.4s;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .gallery img:nth-child(3n+1) {
+            transform: rotate(-1.2deg);
+        }
+
+        .gallery img:nth-child(3n+2) {
+            transform: rotate(1.2deg);
+        }
+
+        .gallery img:nth-child(3n) {
+            transform: rotate(-0.5deg);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05) rotate(0deg);
+            box-shadow: 0 0 28px rgba(255, 77, 109, 0.65);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+        }
+
+        .modal img {
+            display: block;
+            margin: auto;
+            max-width: 85%;
+            max-height: 82%;
+            border-radius: 24px;
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.2);
+        }
+
+        .close {
+            position: absolute;
+            top: 28px;
+            right: 40px;
+            font-size: 42px;
+            cursor: pointer;
+            color: white;
+        }
+
+        @media(max-width:800px) {
+            .love-path::before {
+                left: 18px;
+            }
+
+            .section,
+            .section:nth-child(odd),
+            .section:nth-child(even) {
+                width: 100%;
+                justify-self: stretch;
+            }
+        }
+
+        @media(max-width:600px) {
+            .container {
+                width: 92%;
+                padding: 24px 0 130px;
+            }
+
+            .hero {
+                min-height: 88vh;
+            }
+
+            .hero-card {
+                border-radius: 30px;
+            }
+
+            .hero-actions {
+                gap: 8px;
+            }
+
+            button {
+                width: 100%;
+                padding: 14px 20px;
+            }
+
+            .music-box {
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
+                justify-content: center;
+            }
+
+            .music-box button {
+                width: auto;
+                padding: 11px 16px;
+            }
+
+            .romantic-card,
+            .gallery-card {
+                border-radius: 28px;
+            }
+
+            .gallery img {
+                height: 240px;
+                border-radius: 22px;
+            }
+
+            #typed,
+            #typedHija {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<audio id="musica" loop>
-  <source src="musica2.mp3" type="audio/mpeg">
-</audio>
+    <audio id="musica" loop>
+        <source src="musica2.mp3" type="audio/mpeg">
+    </audio>
 
-<div style="position:fixed;bottom:20px;right:20px;z-index:999;">
-  <button onclick="playMusic()">▶️ Música</button>
-  <button onclick="pauseMusic()">⏸️ Pausar</button>
-</div>
-<div class="stars"></div>
-<div class="nebula"></div>
+    <div class="music-box">
+        <button onclick="playMusic()">▶️ Música</button>
+        <button onclick="pauseMusic()">⏸️ Pausar</button>
+    </div>
 
-<div class="container">
+    <div class="stars"></div>
+    <div class="nebula"></div>
 
-<h1>Feliz 14 de febrero❤️</h1>
-<p class="subtitle">Cada recuerdo contigo es mi momento favorito ✨</p>
+    <div class="container">
 
-<div class="section">
-<h2>⏳ Nuestro tiempo juntos</h2>
-<p class="counter" id="counter"></p>
-</div>
-<!-- 🎮 JUEGO -->
-<div class="section">
-<h2>🎮 Atrapa los corazones</h2>
-<p>Haz clic en 14 corazones ❤️</p>
-<p>Puntos: <span id="score">0</span></p>
-<button onclick="iniciarJuego()">Iniciar Juego 💖</button>
-</div>
+        <header class="hero">
+            <div class="hero-card">
+                <div class="badge">🌹 Para ti, mi amor</div>
+                <h1>Feliz Día de la Madre</h1>
+                <p class="subtitle">
+                    Hoy esta página no tiene juegos ni contadores. Hoy solo tiene amor, recuerdos y palabras que nacen
+                    del corazón. ✨
+                </p>
+                <div class="hero-actions">
+                    <button onclick="playMusic()">Escuchar con música 💖</button>
+                    <button class="outline-btn" onclick="document.getElementById('carta').scrollIntoView()">Leer tus
+                        cartas 💌</button>
+                </div>
+                <a class="scroll-link" href="#contenido">Desliza para sentir nuestro amor ↓</a>
+            </div>
+        </header>
 
+        <main id="contenido" class="love-path">
+            <section class="section" id="carta">
+                <div class="romantic-card">
+                    <span class="mini-title">💌 De mí para ti</span>
+                    <h2>Mi amor, esto es lo que siento</h2>
+                    <p id="typed"></p>
+                </div>
+            </section>
 
-<div class="section">
-<h2>💌 Lo que siento por ti</h2>
-<p id="typed"></p>
-<div id="final"></div>
+            <section class="section" id="carta-hijita">
+                <div class="romantic-card">
+                    <span class="mini-title">👧🏻 De tu hijita para mamá</span>
+                    <h2>Mamita, esta cartita es para ti</h2>
+                    <p id="typedHija"></p>
+                    <div id="final"></div>
+                </div>
+            </section>
+        </main>
 
-</div>
+        <section class="gallery-card">
+            <span class="mini-title">📸 Momentos bonitos</span>
+            <h2>Nuestra historia en imágenes</h2>
+            <p>Estos recuerdos son pedacitos de felicidad que guardo con mucho amor.</p>
+            <div class="gallery" id="gallery"></div>
+        </section>
+    </div>
 
-<div class="section">
-<h2>📸 Nuestra Historia en Imágenes</h2>
-<div class="gallery" id="gallery"></div>
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg">
+    </div>
 
-</div>
-</div>  
+    <script>
+        const text = `Mi amor:
 
+Hoy quiero regalarte estas palabras porque quizá no siempre encuentro la forma perfecta de decirte todo lo que siento por ti.
 
-<!-- Modal -->
-<div id="myModal" class="modal">
-<span class="close" onclick="closeModal()">&times;</span>
-<img id="modalImg">
-</div>
+En este Día de la Madre quiero que sepas que te admiro más de lo que imaginas. Admiro tu fuerza cuando estás cansada y aun así sigues adelante. Admiro tu paciencia, tu forma de cuidar, tu manera de dar amor incluso en silencio, incluso cuando nadie se da cuenta de todo lo que haces.
 
-<script>
+A veces la vida va rápido y uno se acostumbra a ver tus esfuerzos como si fueran parte del día a día, pero hoy quiero detenerme para decirte gracias. Gracias por tu amor, por tu ternura, por tu entrega y por hacer que nuestro hogar tenga ese calor bonito que solo tú sabes dar.
 
-// 🔥 CAMBIA ESTA FECHA
-const startDate = new Date("2020-11-22T00:00:00");
+Para mí no eres solamente mi novia. Eres una mujer increíble, una mamá maravillosa y una persona que merece sentirse amada, valorada y engreída todos los días.
 
-function updateCounter(){
-const now = new Date();
-const diff = now - startDate;
+Quiero que nunca dudes de lo importante que eres para mí. Me siento orgulloso de ti, de la madre que eres y de todo lo que llevas en el corazón.
 
-const days = Math.floor(diff/(1000*60*60*24));
-const hours = Math.floor((diff/(1000*60*60))%24);
-const minutes = Math.floor((diff/(1000*60))%60);
-const seconds = Math.floor((diff/1000)%60);
+Feliz Día de la Madre, mi amor. Que hoy sientas todo el amor que mereces, porque si alguien merece sonreír bonito hoy, eres tú. Te amo muchísimo ❤️`;
 
-document.getElementById("counter").innerHTML =
-`${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos ❤️`;
-}
+        const textHija = `Mamita:
 
+Aunque todavía soy pequeñita, mi corazón sabe muy bien quién eres tú para mí.
 
-setInterval(updateCounter,1000);
-updateCounter();
+Tú eres mi lugar seguro, mis abrazos favoritos, mi calma cuando tengo miedo y mi sonrisa cuando te veo cerca. Tal vez no siempre pueda decirte con palabras todo lo que siento, pero cada vez que te busco, cada vez que te abrazo y cada vez que quiero estar contigo, te estoy diciendo que te amo con todo mi corazón.
 
+Gracias, mamita, por cuidarme, por tener paciencia conmigo, por darme tu amor incluso cuando estás cansada. Gracias por tus noches, por tus días, por tus preocupaciones, por tus besitos, por tus brazos y por todo lo que haces por mí sin pedir nada a cambio.
 
+Yo sé que a veces te cansas, que a veces te preocupas y que quizá hay días en los que sientes que no puedes más. Pero quiero que sepas algo: para mí, tú eres la mejor mamá del mundo. No necesito una mamá perfecta, porque ya tengo algo mucho más bonito: tengo una mamá que me ama de verdad.
 
-// ✍️ efecto máquina de escribir
-const text = "Hay cosas que el tiempo no borra, y tú eres una de ellas.\n\nDesde el momento en que llegaste a mi vida, supe que había algo diferente, algo que no quería perder jamás. Hay recuerdos que se quedan grabados para siempre… miradas, risas, abrazos que se sienten como hogar.\n\nQuiero que nunca olvides lo importante que eres para mí. Nunca olvides que tienes a alguien que cree en ti, que confía en tus sueños y que quiere verte volar tan alto como quieras llegar.\n\nSi algún día dudas, si algún día sientes miedo, recuerda que aquí estoy. Porque más allá de las palabras bonitas, mi intención es quedarme, apoyarte y elegirte todos los días.\n\nHay historias que pasan… y hay historias que se quedan para siempre. La nuestra quiero que sea de esas que nunca se olvidan.";
-    let i = 0;
+Cuando sea grande, tal vez entienda mejor todo lo que hiciste por mí. Pero desde ahora quiero que mi corazón te diga gracias. Gracias por darme amor, por enseñarme con tu ternura y por ser mi mamita hermosa.
 
-function typing(){
-if(i < text.length){
-document.getElementById("typed").innerHTML += text.charAt(i);
-i++;
-setTimeout(typing,80);
-}
-}
-typing();
+Feliz Día de la Madre, mamita. Te amo más de lo que mis palabras pueden decir. Siempre vas a ser mi primer amor, mi refugio y mi persona favorita ❤️`;
 
+        let i = 0;
+        let j = 0;
 
+        function typing() {
+            if (i < text.length) {
+                document.getElementById("typed").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typing, 45);
+            } else {
+                setTimeout(typingHija, 600);
+            }
+        }
 
-// Modal galería
-function openModal(src){
-document.getElementById("myModal").style.display="block";
-document.getElementById("modalImg").src=src;
-}
+        function typingHija() {
+            if (j < textHija.length) {
+                document.getElementById("typedHija").innerHTML += textHija.charAt(j);
+                j++;
+                setTimeout(typingHija, 48);
+            } else {
+                document.getElementById("final").innerHTML = "Con todo nuestro amor para ti, mamita hermosa 🌹❤️";
+                explosionEstrellas();
+            }
+        }
 
-function closeModal(){
-document.getElementById("myModal").style.display="none";
-}
+        typing();
 
-// corazones
-setInterval(()=>{
-const heart=document.createElement("div");
-heart.classList.add("heart");
-heart.innerHTML="❤";
-heart.style.left=Math.random()*100+"vw";
-heart.style.fontSize=Math.random()*20+15+"px";
-document.body.appendChild(heart);
-setTimeout(()=>{heart.remove();},7000);
-},600);
+        function openModal(src) {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("modalImg").src = src;
+        }
 
-// 📸 Generador automático de 15 fotos
-const gallery = document.getElementById("gallery");
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
 
-for(let i = 1; i <= 15; i++){
-    const img = document.createElement("img");
-    img.src = "img/" + i + ".jpg";
-    img.onclick = function(){
-        openModal(this.src);
-    };
-    gallery.appendChild(img);
-}
-// 🎵 Intentar autoplay
-const musica = document.getElementById("musica");
+        setInterval(() => {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = Math.random() * 22 + 15 + "px";
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 7000);
+        }, 650);
 
-// Intento automático al cargar
-window.addEventListener("load", () => {
-    musica.volume = 0.5; // volumen 50%
-    const playPromise = musica.play();
+        const gallery = document.getElementById("gallery");
 
-    if (playPromise !== undefined) {
-        playPromise.catch(() => {
-            // Si el navegador bloquea autoplay,
-            // se activará al primer clic
-            document.addEventListener("click", activarMusicaUnaVez);
+        for (let i = 1; i <= 16; i++) {
+            const img = document.createElement("img");
+            img.src = "img/" + i + ".jpg";
+            img.alt = "Recuerdo " + i;
+            img.onclick = function () {
+                openModal(this.src);
+            };
+            gallery.appendChild(img);
+        }
+
+        const musica = document.getElementById("musica");
+
+        function playMusic() {
+            musica.volume = 0.5;
+            musica.play();
+        }
+
+        function pauseMusic() {
+            musica.pause();
+        }
+
+        window.addEventListener("load", () => {
+            musica.volume = 0.5;
+            const playPromise = musica.play();
+
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    document.addEventListener("click", activarMusicaUnaVez);
+                });
+            }
         });
-    }
-});
 
-function activarMusicaUnaVez() {
-    musica.play();
-    document.removeEventListener("click", activarMusicaUnaVez);
-}
-
-
-function explosionEstrellas(){
-    for(let i = 0; i < 100; i++){
-        const estrella = document.createElement("div");
-        estrella.innerHTML = "✨";
-        estrella.style.position = "fixed";
-        estrella.style.left = "50%";
-        estrella.style.top = "50%";
-        estrella.style.fontSize = "20px";
-        estrella.style.transform = "translate(-50%, -50%)";
-        estrella.style.zIndex = "9999";
-
-        document.body.appendChild(estrella);
-
-        const x = (Math.random() - 0.5) * 800;
-        const y = (Math.random() - 0.5) * 800;
-
-        estrella.animate([
-            { transform: "translate(-50%, -50%)", opacity: 1 },
-            { transform: `translate(${x}px, ${y}px)`, opacity: 0 }
-        ], {
-            duration: 1500,
-            easing: "ease-out"
-        });
-
-        setTimeout(() => estrella.remove(), 1500);
-    }
-
-    // pulso de fondo
-    document.body.style.transition = "background 0.5s";
-    document.body.style.background = "#3a0ca3";
-    setTimeout(() => {
-        document.body.style.background = "#000814";
-    }, 500);
-}
-
-function aumentarMusica(){
-    let vol = musica.volume;
-    const subir = setInterval(() => {
-        if(vol < 0.8){
-            vol += 0.05;
-            musica.volume = vol;
-        } else {
-            clearInterval(subir);
+        function activarMusicaUnaVez() {
+            musica.play();
+            document.removeEventListener("click", activarMusicaUnaVez);
         }
-    }, 200);
-}
 
-// 🌌 Fondo reacciona a la música (MEJORADO)
-setInterval(() => {
+        function explosionEstrellas() {
+            for (let i = 0; i < 120; i++) {
+                const estrella = document.createElement("div");
+                estrella.innerHTML = Math.random() > 0.5 ? "✨" : "🌸";
+                estrella.style.position = "fixed";
+                estrella.style.left = "50%";
+                estrella.style.top = "50%";
+                estrella.style.fontSize = Math.random() * 18 + 16 + "px";
+                estrella.style.transform = "translate(-50%, -50%)";
+                estrella.style.zIndex = "9999";
 
-    if(musica && !musica.paused){
+                document.body.appendChild(estrella);
 
-        const intensidad = Math.sin(musica.currentTime * 4);
+                const x = (Math.random() - 0.5) * 900;
+                const y = (Math.random() - 0.5) * 900;
 
-        const nuevaOpacidad = 0.5 + (intensidad * 0.3);
+                estrella.animate([
+                    { transform: "translate(-50%, -50%) scale(1)", opacity: 1 },
+                    { transform: `translate(${x}px, ${y}px) scale(0.2)`, opacity: 0 }
+                ], {
+                    duration: 1700,
+                    easing: "ease-out"
+                });
 
-        document.querySelector(".nebula").style.opacity = nuevaOpacidad;
+                setTimeout(() => estrella.remove(), 1700);
+            }
 
-        // pequeño zoom dinámico
-        const escala = 1 + (intensidad * 0.05);
-        document.querySelector(".nebula").style.transform = `scale(${escala})`;
-
-    }
-
-}, 80);
-
-// 🎮 JUEGO ATRAPA CORAZONES
-let score = 0;
-let juegoActivo = false;
-
-function iniciarJuego(){
-    score = 0;
-    juegoActivo = true;
-    document.getElementById("score").innerText = score;
-    generarCorazones();
-}
-
-function generarCorazones(){
-
-    if(!juegoActivo) return;
-
-    const heart = document.createElement("div");
-    heart.innerHTML = "❤️";
-    heart.style.position = "fixed";
-    heart.style.fontSize = "30px";
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    heart.style.top = "-50px";
-    heart.style.cursor = "pointer";
-    heart.style.zIndex = "9999";
-
-    document.body.appendChild(heart);
-
-    let posicion = 0;
-
-    const caer = setInterval(() => {
-        posicion += 4;
-        heart.style.top = posicion + "px";
-
-        if(posicion > window.innerHeight){
-            heart.remove();
-            clearInterval(caer);
+            document.body.style.transition = "background 0.5s";
+            document.body.style.background = "#3a0ca3";
+            setTimeout(() => {
+                document.body.style.background = "#120014";
+            }, 500);
         }
-    }, 20);
 
-    heart.onclick = () => {
-        score++;
-        document.getElementById("score").innerText = score;
-        heart.remove();
-        clearInterval(caer);
+        setInterval(() => {
+            if (musica && !musica.paused) {
+                const intensidad = Math.sin(musica.currentTime * 4);
+                const nuevaOpacidad = 0.58 + (intensidad * 0.25);
+                document.querySelector(".nebula").style.opacity = nuevaOpacidad;
 
-        if(score >= 14){
-            juegoActivo = false;
-            victoriaJuego();
-        }
-    };
-
-    setTimeout(generarCorazones, 800);
-}
-
-function victoriaJuego(){
-    document.getElementById("final").innerHTML =
-    "Ganaste ❤️✨<br><br>" +
-    "Ahora puedes pedirme lo que quieras 🎁💫<br><br>" +
-    "<input id='pedido' placeholder='Escribe aquí tu regalo...' " +
-    "style='padding:12px;border-radius:12px;border:none;width:80%;max-width:400px;'><br><br>" +
-    "<button onclick='confirmarPedido()'>Confirmar pedido 💖</button>";
-
-    explosionEstrellas();
-}
-function confirmarPedido(){
-
-    const pedido = document.getElementById("pedido").value;
-
-    if(pedido.trim() === ""){
-        alert("Tienes que pedir algo 😌");
-        return;
-    }
-
-    const numero = "51959706783"; // 👈 PON TU NÚMERO AQUÍ (sin + y sin espacios)
-
-    const mensaje = encodeURIComponent(
-        "🎁 CONTRATO ROMÁNTICO ACTIVADO 🎁\n\n" +
-        "Ya gané el juego ❤️✨\n\n" +
-        "Mi pedido es:\n" + pedido +
-        "\n\nFecha: " + new Date().toLocaleString() +
-        "\n\nFirmado: Tu persona favorita 💖"
-    );
-
-    window.open("https://wa.me/" + numero + "?text=" + mensaje, "_blank");
-}
-
-
-
-</script>
+                const escala = 1 + (intensidad * 0.04);
+                document.querySelector(".nebula").style.transform = `scale(${escala})`;
+            }
+        }, 80);
+    </script>
 
 </body>
+
 </html>
